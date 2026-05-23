@@ -1,0 +1,19 @@
+{
+  "name": "CS50x",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "postCreateCommand": "curl -s https://packagecloud.io/install/repositories/cs50/repo/script.deb.sh | sudo bash && sudo apt update && sudo apt install -y libcs50 clang make && pip install --user cs50 check50 submit50 style50",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-python.python"
+      ]
+    }
+  }
+}
